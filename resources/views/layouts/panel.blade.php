@@ -1,7 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="@yield('ngApp')" >
 
 <head>
+
+
+<!-- Seteos nuevos -->
+{{-- <link href="{{ asset('css/fontawesome/all.min.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('css/bootstrap-select-1.13.14/bootstrap-select.min.css') }}" rel="stylesheet"> --}}
+
+
+
+{{--<link href="{{ asset('css/jquery-ui-1.13.1/jquery-ui.css') }}" rel="stylesheet"> --}}
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
@@ -16,9 +27,13 @@
   <link href="{{ asset('vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
   <!-- Argon CSS -->
   <link href="{{ asset('css/argon.css?v=1.0.0') }}" rel="stylesheet">
+  <script src="{{ asset('js/angular-1.8.2/angular.min.js') }}"></script>
+
+<script src="{{ asset('js/sweetalert2.1.2/sweetalert.min.js') }}"></script>
+@yield('styles')
 </head>
 
-<body>
+<body ng-controller="@yield('ngController')">
   <!-- Sidenav -->
   <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
     <div class="container-fluid">
@@ -131,7 +146,22 @@
   <script src="{{ asset('vendor/chart.js/dist/Chart.min.js') }}"></script>
   <script src="{{ asset('vendor/chart.js/dist/Chart.extension.js') }}"></script>
   <!-- Argon JS -->
+  @yield('scripts')
   <script src="{{ asset('js/argon.js?v=1.0.0') }}"></script>
+  
+
+
+<!--Seteos  nuevos-->
+{{-- <script src="{{ asset('js/jquery-3.5.1/jquery.min.js') }}"></script>
+<script src="{{ asset('js/popper.min.js') }}"></script>
+<script src="{{ asset('js/jquery-ui-1.13.1/jquery-ui.js') }}"></script>
+<script src="{{ asset('js/fontawesome/all.min.js') }}"></script>
+<script src="{{ asset('js/dirPagination.js') }}"></script> --}}
+{{-- <script src="{{ asset('js/ng-table.min.js') }}"></script> --}}
+{{-- <script src="{{ asset('js/bootstrap-select-1.13.14/bootstrap-select.min.js') }}"></script> --}}
+<!-- Angular File -->
+{{-- <script src="{{asset('vendor/select2/dist/js/select2.min.js')}}"></script> --}}
+@yield('ngFile')
 </body>
 
 </html>

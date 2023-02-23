@@ -1,4 +1,16 @@
+<!--Que es esto -->
 @extends('layouts.panel')
+
+<!--Que es esto -->
+@section('page-title', 'Inicio')
+<!--Que es esto -->
+
+
+
+
+@section('ngApp', 'home')
+
+@section('ngController', 'home')
 
 @section('content')
 <div class="row">
@@ -293,3 +305,6 @@
 </div>
 @endsection
 
+@section('ngFile')
+<script src="{{ asset('js/home.js') }}"></script>
+@endsection
